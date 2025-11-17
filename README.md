@@ -7,3 +7,5 @@ As the name implies, the API serves three personas that make up the product. The
 - Shop Owners
 - Customers
 - Delivery People
+
+Shop owners can upload products with its images, title, descriptions and price.
