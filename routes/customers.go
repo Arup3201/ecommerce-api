@@ -1,6 +1,15 @@
 package routes
 
-import "net/http"
+import (
+	"net/http"
 
-func CustomerLogin(w http.ResponseWriter, r *http.Request) {
+	"github.com/Arup3201/ec-api/services"
+)
+
+var Customer = customerRoute{}
+
+type customerRoute struct{}
+
+func (c customerRoute) Login(w http.ResponseWriter, r *http.Request) {
+	services.Customer.Login()
 }

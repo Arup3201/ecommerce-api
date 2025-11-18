@@ -16,7 +16,7 @@ const (
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("POST /api/customers/login", routes.CustomerLogin)
+	mux.HandleFunc("POST /api/customers/login", routes.Customer.Login)
 
 	models.InitDB("user:pass@localhost/bookstore")
 
