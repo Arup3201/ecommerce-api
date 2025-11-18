@@ -4,6 +4,9 @@ import (
 	"fmt"
 	"net/http"
 	"time"
+
+	"github.com/Arup3201/ec-api/models"
+	"github.com/Arup3201/ec-api/routes"
 )
 
 const (
@@ -13,6 +16,9 @@ const (
 
 func main() {
 	mux := http.NewServeMux()
+	mux.HandleFunc("POST /api/customers/login", routes.CustomerLogin)
+
+	models.InitDB("user:pass@localhost/bookstore")
 
 	server := &http.Server{
 		ReadTimeout:  10 * time.Second,
